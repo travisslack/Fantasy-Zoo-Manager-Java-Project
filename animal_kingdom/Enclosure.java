@@ -15,6 +15,6 @@ public abstract class Enclosure {
   }
 
   public int size() {
-    return this.size
+    return this.size;
   }
 }

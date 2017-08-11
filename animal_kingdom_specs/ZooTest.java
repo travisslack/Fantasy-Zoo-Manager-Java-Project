@@ -18,10 +18,10 @@ public class ZooTest {
     assertEquals("Edinburgh Zoo", zoo.getName());
   }
 
-  // @Test
-  // public void zooStartsEmpty() {
-  //   assertEquals(0, zoo.enclosureCount());
-  // }
+  @Test
+  public void zooStartsEmpty() {
+    assertEquals(0, zoo.enclosureCount());
+  }
 
 
 }
