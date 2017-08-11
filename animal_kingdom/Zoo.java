@@ -18,7 +18,7 @@ public class Zoo {
     return this.enclosure.size();
   }
 
-  public void addToEnclosure(Enclosure e) {
+  public void addToZoo(Enclosure e) {
     this.enclosure.add(e);
   }
 
