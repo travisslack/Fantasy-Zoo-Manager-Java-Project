@@ -6,12 +6,14 @@ public class ZooTest {
   Zoo zoo;
   Enclosure tigerEnclosure;
   Enclosure monkeyEnclosure;
+  Enclosure snakeEnclosure;
 
   @Before
   public void before() {
     zoo = new Zoo("Edinburgh Zoo");
     tigerEnclosure = new TigerEnclosure("Tiger Enclosure", 10);
     monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
+    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 20);
   }
 
   @Test
@@ -33,6 +35,12 @@ public class ZooTest {
   @Test
   public void canAddMonkeyEnclosureToZoo() {
     zoo.addToZoo(monkeyEnclosure);
+    assertEquals(1, zoo.enclosureCount());
+  }
+
+  @Test
+  public void canAddSnakeEnclosureToZoo() {
+    zoo.addToZoo(snakeEnclosure);
     assertEquals(1, zoo.enclosureCount());
   }
 
