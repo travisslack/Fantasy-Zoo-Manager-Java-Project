@@ -22,6 +22,10 @@ public class Zoo {
     this.enclosure.add(e);
   }
 
+  public void removeFromZoo(Enclosure e) {
+    this.enclosure.remove(e);
+  }
+
 
 
 

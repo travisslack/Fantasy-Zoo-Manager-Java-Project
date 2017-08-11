@@ -29,11 +29,12 @@ public class ZooTest {
     assertEquals(1, zoo.enclosureCount());
   }
 
-  // @Test
-  // public void canRemoveEnclosureFromZoo() {
-  //   zoo.addToZoo(tigerEnclosure);
-  //   zoo.removeFrom
-  // }
+  @Test
+  public void canRemoveEnclosureFromZoo() {
+    zoo.addToZoo(tigerEnclosure);
+    zoo.removeFromZoo(tigerEnclosure);
+    assertEquals(0, zoo.enclosureCount());
+  }
 
 
 }
