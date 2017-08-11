@@ -9,7 +9,7 @@ public class ZooTest {
   @Before
   public void before() {
     zoo = new Zoo("Edinburgh Zoo");
-    tigerEnclosure = new TigerEnclosure("Tiger");
+    tigerEnclosure = new TigerEnclosure("Tiger Enclosure", 10);
 
   }
 
@@ -17,6 +17,11 @@ public class ZooTest {
   public void hasName() {
     assertEquals("Edinburgh Zoo", zoo.getName());
   }
+
+  // @Test
+  // public void zooStartsEmpty() {
+  //   assertEquals(0, zoo.enclosureCount());
+  // }
 
 
 }
