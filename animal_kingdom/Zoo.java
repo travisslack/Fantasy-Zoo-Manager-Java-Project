@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class Zoo {
   private String name;
-  // private Zookeeper zookeeper;
   private ArrayList<Enclosure> enclosure;
 
   public Zoo(String name) {
@@ -18,6 +17,12 @@ public class Zoo {
   public int enclosureCount() {
     return this.enclosure.size();
   }
+
+  public void addToEnclosure(Enclosure e) {
+    this.enclosure.add(e);
+  }
+
+
 
 
 }

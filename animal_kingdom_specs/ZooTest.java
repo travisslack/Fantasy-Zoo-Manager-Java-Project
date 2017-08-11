@@ -23,7 +23,11 @@ public class ZooTest {
     assertEquals(0, zoo.enclosureCount());
   }
 
-  
+  @Test
+  public void canAddTigerEnclosureToZoo() {
+    zoo.addToEnclosure(tigerEnclosure);
+    assertEquals(1, zoo.enclosureCount());
+  }
 
 
 }
