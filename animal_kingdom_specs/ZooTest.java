@@ -4,10 +4,12 @@ import animal_kingdom.*;
 
 public class ZooTest {
   Zoo zoo;
+  Enclosure tigerEnclosure;
 
   @Before
   public void before() {
     zoo = new Zoo("Edinburgh Zoo");
+    tigerEnclosure = new TigerEnclosure("Tiger");
 
   }
 
