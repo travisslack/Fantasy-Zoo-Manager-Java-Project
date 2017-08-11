@@ -20,4 +20,9 @@ public class MonkeyTest {
     assertEquals("Brown", monkey.getColour());
   }
 
+  @Test 
+  public void hasAge() {
+    assertEquals(4, monkey.getAge());
+  }
+
 }

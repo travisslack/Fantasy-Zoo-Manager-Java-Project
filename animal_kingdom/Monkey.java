@@ -14,6 +14,10 @@ public class Monkey extends Animal {
     return this.colour;
   }
 
+  public int getAge() {
+    return this.age;
+  }
+
 
 
 }
