@@ -7,12 +7,17 @@ public class MonkeyTest {
 
   @Before
   public void before() {
-    monkey = new Monkey("Julius", "brown", 4);
+    monkey = new Monkey("Julius", "Brown", 4);
   }
 
   @Test
   public void hasName() {
   assertEquals("Julius", monkey.getName());
+  }
+
+  @Test 
+  public void hasColour() {
+    assertEquals("Brown", monkey.getColour());
   }
 
 }

@@ -10,4 +10,10 @@ public class Monkey extends Animal {
     return this.name;
   }
 
+  public String getColour() {
+    return this.colour;
+  }
+
+
+
 }
