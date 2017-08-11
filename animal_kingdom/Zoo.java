@@ -15,5 +15,9 @@ public class Zoo {
     return this.name;
   }
 
-  
+  public int enclosureCount() {
+    return this.enclosure.size();
+  }
+
+
 }
