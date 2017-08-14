@@ -15,6 +15,11 @@ public class SnakeTest {
     assertEquals("Kaa", snake.getName());
   }
 
-  
+  @Test
+  public void hasColour() {
+    assertEquals("Green", snake.getColour());
+  }
+
+
 
 }
