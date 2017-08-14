@@ -28,7 +28,7 @@ public class ZooKeeperTest {
   }
 
   @Test
-  public void addAnimalToEnclosure(){
+  public void canAddMonkeyToEnclosure(){
     zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
     assertEquals(1, monkeyEnclosure.animalCount());
   }
@@ -40,7 +40,7 @@ public class ZooKeeperTest {
   }
 
   @Test
-  public void removeAnimalFromEnclosure() {
+  public void canRemoveMonkeyFromEnclosure() {
     zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
     zooKeeper.removeFromEnclosure(monkey, monkeyEnclosure);
     assertEquals(0, monkeyEnclosure.animalCount());
@@ -54,16 +54,16 @@ public class ZooKeeperTest {
   }
 
   @Test
-  public void addFoodToAnimal() {
+  public void addFoodToMonkey() {
     zooKeeper.feedAnimal(banana, monkey);
     assertEquals(1, monkey.foodCount());
   }
 
-  // @Test
-  // public void addFoodToAnimal() {
-  //   zooKeeper.feedAnimal(nut, snake);
-  //   assertEquals(1, snake.foodCount());
-  // }
+  @Test
+  public void addFoodToSnake() {
+    zooKeeper.feedAnimal(nut, snake);
+    assertEquals(1, snake.foodCount());
+  }
 
 
 
