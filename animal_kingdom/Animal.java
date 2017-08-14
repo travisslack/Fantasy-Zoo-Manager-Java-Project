@@ -1,4 +1,5 @@
 package animal_kingdom;
+import behaviours.*;
 
 public abstract class Animal {
   protected String name;
@@ -14,6 +15,11 @@ public abstract class Animal {
   public String getName() {
     return this.name;
   }
+
+
+  public abstract void eat(Edible food);
+
+  
 
   
 

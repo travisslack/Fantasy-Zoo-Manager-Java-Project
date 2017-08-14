@@ -6,12 +6,16 @@ public class ZooKeeperTest {
   ZooKeeper zooKeeper;
   Monkey monkey;
   MonkeyEnclosure monkeyEnclosure;
+  Banana banana;
+  Nut nut;
   
   @Before
   public void before() {
     zooKeeper = new ZooKeeper("David");
     monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
     monkey = new Monkey("Julius", "Brown", 4);
+    banana = new Banana();
+    nut = new Nut();
   }
 
   @Test
@@ -31,6 +35,21 @@ public class ZooKeeperTest {
     zooKeeper.removeFromEnclosure(monkey, monkeyEnclosure);
     assertEquals(0, monkeyEnclosure.animalCount());
   }
+
+  @Test
+  public void addFoodToAnimal() {
+    zooKeeper.feedAnimal(banana, monkey);
+    assertEquals(1, monkey.foodCount());
+  }
+
+  // - add 2nd animal to enclosure
+  // - feed one animal
+  // - call zooKeeper.feedHungryAnimals(enclosure)
+  // - check for expected outcome -
+  //   - animal with empty stomach has now got food
+  //   - animal with food in stomach unchanged
+
+
 
 
 }

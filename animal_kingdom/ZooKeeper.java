@@ -1,5 +1,6 @@
 package animal_kingdom;
 import java.util.*;
+import behaviours.*;
 
 public class ZooKeeper {
   private String name;
@@ -19,6 +20,10 @@ public class ZooKeeper {
 
   public void removeFromEnclosure(Animal animal, Enclosure enclosure) {
     enclosure.removeFromEnclosure(animal);
+  }
+
+  public void feedAnimal(Edible food, Animal animal) {
+    animal.eat(food);
   }
 }
 

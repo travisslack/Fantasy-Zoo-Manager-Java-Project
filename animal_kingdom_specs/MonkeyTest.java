@@ -4,13 +4,13 @@ import animal_kingdom.*;
 
 public class MonkeyTest {
   Monkey monkey;
-  Plant plant;
+  Nut nut;
   Banana banana;
 
   @Before
   public void before() {
     monkey = new Monkey("Julius", "Brown", 4);
-    plant = new Plant();
+    nut = new Nut();
     banana = new Banana();
   }
 
@@ -36,7 +36,7 @@ public class MonkeyTest {
 
   @Test
   public void canEat() {
-    monkey.eat(plant);
+    monkey.eat(nut);
     monkey.eat(banana);
     assertEquals(2, monkey.foodCount());
   }
