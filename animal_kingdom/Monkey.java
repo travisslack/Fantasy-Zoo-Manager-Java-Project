@@ -1,4 +1,6 @@
 package animal_kingdom;
+import java.util.ArrayList;
+import behaviours.*;
 
 public class Monkey extends Animal {
   private ArrayList<Plants> stomach;
@@ -18,6 +20,10 @@ public class Monkey extends Animal {
 
   public int getAge() {
     return this.age;
+  }
+
+  public int foodCount() {
+    return this.stomach.size();
   }
 
 
