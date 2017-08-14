@@ -10,7 +10,9 @@ public class Snake extends Animal {
     this.stomach = new ArrayList<Edible>();
   }
 
-  
+  public int foodCount() {
+    return this.stomach.size();
+  }
 
 
 }

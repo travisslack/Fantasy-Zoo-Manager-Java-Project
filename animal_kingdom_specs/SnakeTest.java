@@ -25,6 +25,11 @@ public class SnakeTest {
     assertEquals(6, snake.getAge());
   }
 
+  @Test
+  public void stomachStartsEmpty() {
+    assertEquals(0, snake.foodCount());
+  }
+
 
 
 }
