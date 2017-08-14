@@ -28,4 +28,8 @@ public abstract class Enclosure {
     this.animals.add(a);
   }
 
+  public void removeFromEnclosure(Animal a) {
+    this.animals.remove(a);
+  }
+
 }
