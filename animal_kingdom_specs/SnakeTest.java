@@ -20,6 +20,11 @@ public class SnakeTest {
     assertEquals("Green", snake.getColour());
   }
 
+  @Test 
+  public void hasAge() {
+    assertEquals(6, snake.getAge());
+  }
+
 
 
 }
