@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public abstract class Enclosure {
   protected String name;
   protected int size;
-  // protected ArrayList<Animal> animals;
+  // protected ArrayList<Animal> animal;
 
   public Enclosure(String name, int size) {
     this.name = name;
@@ -19,8 +19,4 @@ public abstract class Enclosure {
   public int size() {
     return this.size;
   }
-
-  // public void addAnimal(Animal animal) {
-  //   this.animals.add(animal);
-  // }
 }
