@@ -16,6 +16,14 @@ public abstract class Animal {
     return this.name;
   }
 
+  public String getColour() {
+    return this.colour;
+  }
+
+  public int getAge() {
+    return this.age;
+  }
+
 
   public abstract void eat(Edible food);
 

@@ -11,18 +11,6 @@ public class Monkey extends Animal {
     this.stomach = new ArrayList<Edible>();
   }
 
-  public String getName() {
-    return this.name;
-  }
-
-  public String getColour() {
-    return this.colour;
-  }
-
-  public int getAge() {
-    return this.age;
-  }
-
   public int foodCount() {
     return this.stomach.size();
   }
