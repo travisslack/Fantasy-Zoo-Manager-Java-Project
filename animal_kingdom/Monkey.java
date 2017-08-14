@@ -26,6 +26,10 @@ public class Monkey extends Animal {
     return this.stomach.size();
   }
 
+  public void eat(Plants food) {
+    this.stomach.add(food);
+  }
+
 
 
 }

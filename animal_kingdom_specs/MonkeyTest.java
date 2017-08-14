@@ -34,4 +34,11 @@ public class MonkeyTest {
     assertEquals(0, monkey.foodCount());
   }
 
+  @Test
+  public void canEat() {
+    monkey.eat(plant);
+    monkey.eat(banana);
+    assertEquals(2, monkey.foodCount());
+  }
+
 }
