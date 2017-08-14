@@ -5,7 +5,9 @@ import animal_kingdom.*;
 public class ZooKeeperTest {
   ZooKeeper zooKeeper;
   Monkey monkey;
+  Snake snake;
   MonkeyEnclosure monkeyEnclosure;
+  SnakeEnclosure snakeEnclosure;
   Banana banana;
   Nut nut;
   
@@ -13,7 +15,9 @@ public class ZooKeeperTest {
   public void before() {
     zooKeeper = new ZooKeeper("David");
     monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
+    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 55);
     monkey = new Monkey("Julius", "Brown", 4);
+    snake = new Snake("Kaa", "Green", 6);
     banana = new Banana();
     nut = new Nut();
   }
@@ -30,6 +34,12 @@ public class ZooKeeperTest {
   }
 
   @Test
+  public void canAddSnakeToEnclosure(){
+    zooKeeper.addToEnclosure(snake, snakeEnclosure);
+    assertEquals(1, snakeEnclosure.animalCount());
+  }
+
+  @Test
   public void removeAnimalFromEnclosure() {
     zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
     zooKeeper.removeFromEnclosure(monkey, monkeyEnclosure);
@@ -37,10 +47,25 @@ public class ZooKeeperTest {
   }
 
   @Test
+  public void canRemoveSnakeFromEnclosure() {
+    zooKeeper.addToEnclosure(snake, snakeEnclosure);
+    zooKeeper.removeFromEnclosure(snake, snakeEnclosure);
+    assertEquals(0, snakeEnclosure.animalCount());
+  }
+
+  @Test
   public void addFoodToAnimal() {
     zooKeeper.feedAnimal(banana, monkey);
     assertEquals(1, monkey.foodCount());
   }
+
+  // @Test
+  // public void addFoodToAnimal() {
+  //   zooKeeper.feedAnimal(nut, snake);
+  //   assertEquals(1, snake.foodCount());
+  // }
+
+
 
   // - add 2nd animal to enclosure
   // - feed one animal
