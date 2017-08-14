@@ -22,6 +22,14 @@ public class SnakeEnclosureTest {
     assertEquals(0, snakeEnclosure.animalCount());
   }
 
+  @Test
+  public void canAddSnakeToSnakeEnclosure() {
+    snakeEnclosure.addToEnclosure(snake);
+    assertEquals(1, snakeEnclosure.animalCount());
+  }
+
+
+
 
 
 }
