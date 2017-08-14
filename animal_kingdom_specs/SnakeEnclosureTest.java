@@ -17,4 +17,11 @@ public class SnakeEnclosureTest {
     assertEquals("Snake Enclosure", snakeEnclosure.getName());
   }
 
+  @Test
+  public void snakeEnclosureStartsEmpty() {
+    assertEquals(0, snakeEnclosure.animalCount());
+  }
+
+
+
 }
