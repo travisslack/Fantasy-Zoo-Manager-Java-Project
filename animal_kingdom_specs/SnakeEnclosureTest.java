@@ -28,6 +28,13 @@ public class SnakeEnclosureTest {
     assertEquals(1, snakeEnclosure.animalCount());
   }
 
+  @Test
+  public void canRemoveSnakeFromSnakeEnclosure() {
+    snakeEnclosure.addToEnclosure(snake);
+    snakeEnclosure.removeFromEnclosure(snake);
+    assertEquals(0, snakeEnclosure.animalCount());
+  }
+
 
 
 
