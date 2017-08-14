@@ -8,6 +8,7 @@ public class ZooKeeperTest {
   @Before
   public void before() {
     zooKeeper = new ZooKeeper("David");
+
   }
 
   @Test
