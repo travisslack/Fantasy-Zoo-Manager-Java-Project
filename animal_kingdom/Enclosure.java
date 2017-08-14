@@ -4,12 +4,12 @@ import java.util.ArrayList;
 public abstract class Enclosure {
   protected String name;
   protected int size;
-  protected ArrayList<Animal> animal;
+  protected ArrayList<Animal> animals;
 
   public Enclosure(String name, int size) {
     this.name = name;
     this.size = size;
-    this.animal = new ArrayList<Animal>(); 
+    this.animals = new ArrayList<Animal>(); 
   }
 
   public String getName() {
@@ -18,6 +18,14 @@ public abstract class Enclosure {
 
   public int size() {
     return this.size;
+  }
+
+  public int animalCount() {
+    return this.animals.size();
+  }
+
+  public void addToEnclosure(Animal a) {
+    this.animals.add(a);
   }
 
 }
