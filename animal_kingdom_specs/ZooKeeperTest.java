@@ -15,7 +15,7 @@ public class ZooKeeperTest {
   public void before() {
     zooKeeper = new ZooKeeper("David");
     monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
-    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 55);
+    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 10);
     monkey = new Monkey("Julius", "Brown", 4);
     snake = new Snake("Kaa", "Green", 6);
     banana = new Banana();
