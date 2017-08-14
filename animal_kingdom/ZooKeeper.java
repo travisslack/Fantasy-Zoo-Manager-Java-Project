@@ -16,5 +16,9 @@ public class ZooKeeper {
   public void addToEnclosure(Animal animal, Enclosure enclosure) {
      enclosure.addToEnclosure(animal);
   }
+
+  public void removeFromEnclosure(Animal animal, Enclosure enclosure) {
+    enclosure.removeFromEnclosure(animal);
+  }
 }
 

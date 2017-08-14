@@ -25,5 +25,12 @@ public class ZooKeeperTest {
     assertEquals(1, monkeyEnclosure.animalCount());
   }
 
+  @Test
+  public void removeAnimalFromEnclosure() {
+    zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
+    zooKeeper.removeFromEnclosure(monkey, monkeyEnclosure);
+    assertEquals(0, monkeyEnclosure.animalCount());
+  }
+
 
 }
