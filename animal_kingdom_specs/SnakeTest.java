@@ -30,6 +30,13 @@ public class SnakeTest {
     assertEquals(0, snake.foodCount());
   }
 
+  @Test
+  public void canEat() {
+    snake.eat(nut);
+    snake.eat(banana);
+    assertEquals(2, snake.foodCount());
+  }
+
 
 
 }

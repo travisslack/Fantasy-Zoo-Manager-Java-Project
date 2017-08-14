@@ -14,5 +14,12 @@ public class Snake extends Animal {
     return this.stomach.size();
   }
 
+  public void eat(Edible food) {
+    this.stomach.add(food);
+  }
+
+
+
+
 
 }
