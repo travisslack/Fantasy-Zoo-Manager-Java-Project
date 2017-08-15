@@ -3,12 +3,14 @@ import java.util.ArrayList;
 
 public class Zoo {
   private String name;
+  private int capacity;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
 
   public Zoo(String name, int capacity) {
     this.name = name;
+    this.capacity = capacity;
     this.enclosure = new ArrayList<Enclosure>();
     this.zooKeepers = new ArrayList<ZooKeeper>();
     this.visitors = new ArrayList<Visitor>();
@@ -42,7 +44,12 @@ public class Zoo {
     return this.capacity;
   }
 
-  public boolean admitVisitor(Visitor v) {
+  // public boolean admitVisitor(Visitor v) {
+  //   if (visitors.length < capacity) {
+  //     return "visitor can enter";
+  //   } else if (visitors.length >= capacity) {
+  //     return "visitor can't enter";
+  //   }
     // if the length of the arraylist of visitors
     // is less than the capacity
     // allow admittance
@@ -58,4 +65,4 @@ public class Zoo {
 
 
 
-}
+
