@@ -24,6 +24,10 @@ public class Zoo {
     return this.visitorCapacity;
   }
 
+  public int getAnimalCapacity() {
+    return this.animalCapacity;
+  }
+
   public int enclosureCount() {
     return this.enclosure.size();
   }

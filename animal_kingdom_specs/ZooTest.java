@@ -33,7 +33,10 @@ public class ZooTest {
     assertEquals(300, edinburghZoo.getVisitorCapacity());
   }
 
-
+  @Test
+  public void hasAnimalCapacity() {
+    assertEquals(80, edinburghZoo.getAnimalCapacity());
+  }
 
   @Test
   public void zooStartsEmpty() {
