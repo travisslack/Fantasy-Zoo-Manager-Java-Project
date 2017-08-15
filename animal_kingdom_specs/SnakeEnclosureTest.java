@@ -23,23 +23,4 @@ public class SnakeEnclosureTest {
   public void snakeEnclosureStartsEmpty() {
     assertEquals(0, snakeEnclosure.animalCount());
   }
-
-  @Test
-  public void canAddSnakeToSnakeEnclosure() {
-    snakeEnclosure.addToEnclosure(snake);
-    assertEquals(1, snakeEnclosure.animalCount());
-  }
-
-  @Test
-  public void canAddMonkeyToSnakeEnclosure() {
-    snakeEnclosure.addToEnclosure(monkey);
-    assertEquals(1, snakeEnclosure.animalCount());
-  }
-
-  @Test
-  public void canRemoveSnakeFromSnakeEnclosure() {
-    snakeEnclosure.addToEnclosure(snake);
-    snakeEnclosure.removeFromEnclosure(snake);
-    assertEquals(0, snakeEnclosure.animalCount());
-  }
 }

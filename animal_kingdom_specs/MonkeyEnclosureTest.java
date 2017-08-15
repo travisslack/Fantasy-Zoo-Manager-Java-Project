@@ -21,17 +21,4 @@ public class MonkeyEnclosureTest {
   public void monkeyEnclosureStartsEmpty() {
     assertEquals(0, monkeyEnclosure.animalCount());
   }
-
-  @Test
-  public void canAddMonkeyToMonkeyEnclosure() {
-    monkeyEnclosure.addToEnclosure(monkey);
-    assertEquals(1, monkeyEnclosure.animalCount());
-  }
-
-  @Test
-  public void canRemoveMonkeyFromMonkeyEnclosure() {
-    monkeyEnclosure.addToEnclosure(monkey);
-    monkeyEnclosure.removeFromEnclosure(monkey);
-    assertEquals(0, monkeyEnclosure.animalCount());
-  }
 }
