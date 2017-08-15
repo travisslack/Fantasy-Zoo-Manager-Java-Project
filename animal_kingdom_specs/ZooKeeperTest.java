@@ -1,80 +1,82 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import animal_kingdom.*;
+import behaviours.*;
 
 public class ZooKeeperTest {
-  ZooKeeper zooKeeper;
+  ZooKeeper edinburghZooKeeper;
   Monkey monkey;
   Snake snake;
-  MonkeyEnclosure monkeyEnclosure;
-  SnakeEnclosure snakeEnclosure;
+  MonkeyEnclosure edinburghMonkeyEnclosure;
+  SnakeEnclosure edinburghSnakeEnclosure;
   Banana banana;
   Nut nut;
+
   
   @Before
   public void before() {
-    zooKeeper = new ZooKeeper("David");
-    monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
-    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 10);
+    edinburghZooKeeper = new ZooKeeper("David");
     monkey = new Monkey("Julius", "Brown", 4);
     snake = new Snake("Kaa", "Green", 6);
+    edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
+    edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 10);
     banana = new Banana();
     nut = new Nut();
   }
 
   @Test
   public void hasName() {
-    assertEquals("David", zooKeeper.getName());
+    assertEquals("David", edinburghZooKeeper.getName());
   }
 
   @Test
   public void canAddMonkeyToMonkeyEnclosure(){
-    zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
-    assertEquals(1, monkeyEnclosure.animalCount());
+    edinburghZooKeeper.addToEnclosure(monkey, edinburghMonkeyEnclosure);
+    assertEquals(1, edinburghMonkeyEnclosure.animalCount());
   }
 
   @Test
   public void canAddSnakeToSnakeEnclosure(){
-    zooKeeper.addToEnclosure(snake, snakeEnclosure);
-    assertEquals(1, snakeEnclosure.animalCount());
+    edinburghZooKeeper.addToEnclosure(snake, edinburghSnakeEnclosure);
+    assertEquals(1, edinburghSnakeEnclosure.animalCount());
   }
 
   @Test
   public void canAddMonkeyToSnakeEnclosure() {
-    snakeEnclosure.addToEnclosure(monkey);
-    assertEquals(1, snakeEnclosure.animalCount());
+    edinburghSnakeEnclosure.addToEnclosure(monkey);
+    assertEquals(1, edinburghSnakeEnclosure.animalCount());
   }
 
   @Test
   public void canRemoveMonkeyFromMonkeyEnclosure() {
-    zooKeeper.addToEnclosure(monkey, monkeyEnclosure);
-    zooKeeper.removeFromEnclosure(monkey, monkeyEnclosure);
-    assertEquals(0, monkeyEnclosure.animalCount());
+    edinburghZooKeeper.addToEnclosure(monkey, edinburghMonkeyEnclosure);
+    edinburghZooKeeper.removeFromEnclosure(monkey, edinburghMonkeyEnclosure);
+    assertEquals(0, edinburghMonkeyEnclosure.animalCount());
   }
 
   @Test
   public void canRemoveSnakeFromSnakeEnclosure() {
-    zooKeeper.addToEnclosure(snake, snakeEnclosure);
-    zooKeeper.removeFromEnclosure(snake, snakeEnclosure);
-    assertEquals(0, snakeEnclosure.animalCount());
+    edinburghZooKeeper.addToEnclosure(snake, edinburghSnakeEnclosure);
+    edinburghZooKeeper.removeFromEnclosure(snake, edinburghSnakeEnclosure);
+    assertEquals(0, edinburghSnakeEnclosure.animalCount());
   }
 
   @Test
   public void canFeedBananaToMonkey() {
-    zooKeeper.feedAnimal(banana, monkey);
+    edinburghZooKeeper.feedAnimal(banana, monkey);
     assertEquals(1, monkey.foodCount());
   }
 
   @Test
   public void canFeedNutToSnake() {
-    zooKeeper.feedAnimal(nut, snake);
+    edinburghZooKeeper.feedAnimal(nut, snake);
     assertEquals(1, snake.foodCount());
   }
 
   @Test
   public void canFeedMonkeyToSnake() {
-    zooKeeper.addToEnclosure(monkey, snakeEnclosure);
-    zooKeeper.feedAnimal(monkey, snake);
+    edinburghZooKeeper.addToEnclosure(monkey, edinburghSnakeEnclosure);
+    edinburghZooKeeper.feedAnimal(monkey, snake);
     assertEquals(1, snake.foodCount());
   }
 

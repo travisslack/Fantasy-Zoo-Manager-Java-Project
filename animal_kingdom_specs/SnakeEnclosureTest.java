@@ -3,24 +3,24 @@ import org.junit.*;
 import animal_kingdom.*;
 
 public class SnakeEnclosureTest {
-  SnakeEnclosure snakeEnclosure;
+  SnakeEnclosure edinburghSnakeEnclosure;
   Snake snake;
   Monkey monkey;
 
   @Before
   public void before() {
-    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 10);
+    edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 10);
     snake = new Snake("Kaa", "Green", 6);
     monkey = new Monkey("James", "Red", 7);
   }
 
   @Test 
   public void hasName() {
-    assertEquals("Snake Enclosure", snakeEnclosure.getName());
+    assertEquals("Edinburgh Snake Enclosure", edinburghSnakeEnclosure.getName());
   }
 
   @Test
   public void snakeEnclosureStartsEmpty() {
-    assertEquals(0, snakeEnclosure.animalCount());
+    assertEquals(0, edinburghSnakeEnclosure.animalCount());
   }
 }

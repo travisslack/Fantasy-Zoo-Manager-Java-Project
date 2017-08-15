@@ -3,44 +3,53 @@ import org.junit.*;
 import animal_kingdom.*;
 
 public class ZooTest {
-  Zoo zoo;
-  Enclosure monkeyEnclosure;
-  Enclosure snakeEnclosure;
+  Zoo edinburghZoo;
+  MonkeyEnclosure edinburghMonkeyEnclosure;
+  SnakeEnclosure edinburghSnakeEnclosure;
+  ZooKeeper edinburghZooKeeper;
 
   @Before
   public void before() {
-    zoo = new Zoo("Edinburgh Zoo");
-    monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
-    snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 20);
+    edinburghZoo = new Zoo("Edinburgh Zoo");
+    edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
+    edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 20);
+    edinburghZooKeeper = new ZooKeeper("David");
   }
 
   @Test
+
   public void hasName() {
-    assertEquals("Edinburgh Zoo", zoo.getName());
+    assertEquals("Edinburgh Zoo", edinburghZoo.getName());
   }
 
   @Test
   public void zooStartsEmpty() {
-    assertEquals(0, zoo.enclosureCount());
+    assertEquals(0, edinburghZoo.enclosureCount());
   }
 
   @Test
   public void canAddMonkeyEnclosureToZoo() {
-    zoo.addToZoo(monkeyEnclosure);
-    assertEquals(1, zoo.enclosureCount());
+    edinburghZoo.addToZoo(edinburghMonkeyEnclosure);
+    assertEquals(1, edinburghZoo.enclosureCount());
   }
 
   @Test
   public void canAddSnakeEnclosureToZoo() {
-    zoo.addToZoo(snakeEnclosure);
-    assertEquals(1, zoo.enclosureCount());
+    edinburghZoo.addToZoo(edinburghSnakeEnclosure);
+    assertEquals(1, edinburghZoo.enclosureCount());
   }
 
   @Test
   public void canRemoveEnclosureFromZoo() {
-    zoo.addToZoo(monkeyEnclosure);
-    zoo.removeFromZoo(monkeyEnclosure);
-    assertEquals(0, zoo.enclosureCount());
+    edinburghZoo.addToZoo(edinburghMonkeyEnclosure);
+    edinburghZoo.removeFromZoo(edinburghMonkeyEnclosure);
+    assertEquals(0, edinburghZoo.enclosureCount());
+  }
+
+  @Test
+  public void canZooHaveAZooKeeper() {
+    edinburghZoo.addToZoo(edinburghZooKeeper);
+    assertEquals(1, edinburghZoo.zooKeeperCount());
   }
 
 
