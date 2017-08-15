@@ -12,7 +12,6 @@ public class ZooKeeperTest {
   Banana banana;
   Nut nut;
 
-  
   @Before
   public void before() {
     edinburghZooKeeper = new ZooKeeper("David");
@@ -79,7 +78,5 @@ public class ZooKeeperTest {
     edinburghZooKeeper.feedAnimal(monkey, snake);
     assertEquals(1, snake.foodCount());
   }
-
-
 
 }

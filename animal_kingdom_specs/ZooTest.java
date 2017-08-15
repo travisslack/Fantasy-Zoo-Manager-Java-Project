@@ -14,8 +14,8 @@ public class ZooTest {
 
   @Before
   public void before() {
-    edinburghZoo = new Zoo("Edinburgh Zoo", 300, 80);
-    londonZoo = new Zoo("London Zoo", 500, 150);
+    edinburghZoo = new Zoo("Edinburgh Zoo", 300);
+    londonZoo = new Zoo("London Zoo", 500);
     edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
     edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 20);
     londonMonkeyEnclosure = new MonkeyEnclosure("London Monkey Enclosure", 17);
@@ -34,12 +34,7 @@ public class ZooTest {
   }
 
   @Test
-  public void hasAnimalCapacity() {
-    assertEquals(80, edinburghZoo.getAnimalCapacity());
-  }
-
-  @Test
-  public void zooStartsEmpty() {
+  public void enclosuresInsideZooStartsEmpty() {
     assertEquals(0, edinburghZoo.enclosureCount());
   }
 
@@ -67,5 +62,7 @@ public class ZooTest {
     edinburghZoo.addToZoo(edinburghZooKeeper);
     assertEquals(1, edinburghZoo.zooKeeperCount());
   }
+
+
 
 }
