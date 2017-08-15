@@ -1,11 +1,12 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import animal_kingdom.*;
+import behaviours.*;
 
 public class MonkeyTest {
   Monkey monkey;
-  Nut nut;
-  Banana banana;
+  Edible nut;
+  Edible banana;
 
   @Before
   public void before() {
