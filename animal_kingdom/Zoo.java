@@ -3,23 +3,17 @@ import java.util.ArrayList;
 
 public class Zoo {
   private String name;
-  private int visitorCapacity;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
 
-  public Zoo(String name, int visitorCapacity) {
+  public Zoo(String name) {
     this.name = name;
-    this.visitorCapacity = visitorCapacity;
     this.enclosure = new ArrayList<Enclosure>();
     this.zooKeepers = new ArrayList<ZooKeeper>();
   }
 
   public String getName() {
     return this.name;
-  }
-
-  public int getVisitorCapacity() {
-    return this.visitorCapacity;
   }
 
   public int enclosureCount() {
