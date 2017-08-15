@@ -14,8 +14,8 @@ public class ZooTest {
 
   @Before
   public void before() {
-    edinburghZoo = new Zoo("Edinburgh Zoo");
-    londonZoo = new Zoo("London Zoo");
+    edinburghZoo = new Zoo("Edinburgh Zoo", 1000);
+    londonZoo = new Zoo("London Zoo", 5000);
     edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
     edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 20);
     londonMonkeyEnclosure = new MonkeyEnclosure("London Monkey Enclosure", 17);
