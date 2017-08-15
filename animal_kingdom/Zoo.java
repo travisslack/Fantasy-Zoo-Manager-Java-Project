@@ -40,16 +40,32 @@ public class Zoo {
     this.zooKeepers.add(zk);
   }
 
+  public int visitorCount() {
+    return this.visitors.size();
+  }
+
   public int getCapacity() {
     return this.capacity;
   }
 
-  // public boolean admitVisitor(Visitor v) {
-  //   if (visitors.length < capacity) {
-  //     return "visitor can enter";
-  //   } else if (visitors.length >= capacity) {
-  //     return "visitor can't enter";
+  public void addToZoo(Visitor v) {
+    this.visitors.add(v);
+  }
+
+  // public Boolean canAdmitVisitor(Visitor visitor) {
+  //   if (this.visitors < capacity) {
+  //     return true;
+  //   } else if (visitors >= capacity) {
+  //     return false;
   //   }
+  // }
+
+  // public void admitVisitor(Visitor visitor){
+  //   if this.canAdmitVisitor(Visitor){
+  //     return this.capacity.add();
+  //   }
+  // }
+
     // if the length of the arraylist of visitors
     // is less than the capacity
     // allow admittance

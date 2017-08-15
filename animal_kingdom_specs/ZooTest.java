@@ -10,6 +10,7 @@ public class ZooTest {
   MonkeyEnclosure londonMonkeyEnclosure;
   ZooKeeper edinburghZooKeeper;
   ZooKeeper londonZooKeeper;
+  Visitor visitor1;
 
 
   @Before
@@ -21,6 +22,7 @@ public class ZooTest {
     londonMonkeyEnclosure = new MonkeyEnclosure("London Monkey Enclosure", 17);
     edinburghZooKeeper = new ZooKeeper("David");
     londonZooKeeper = new ZooKeeper("Steve");
+    visitor1 = new Visitor("J", 70.00);
   }
 
   @Test
@@ -57,6 +59,13 @@ public class ZooTest {
     edinburghZoo.addToZoo(edinburghZooKeeper);
     assertEquals(1, edinburghZoo.zooKeeperCount());
   }
+
+  @Test
+  public void zooIsNotFull() {
+  edinburghZoo.addToZoo(visitor1);
+  assertEquals(1, edinburghZoo.visitorCount());
+  }
+
 
 
 
