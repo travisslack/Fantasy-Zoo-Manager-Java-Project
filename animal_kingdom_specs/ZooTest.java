@@ -4,16 +4,23 @@ import animal_kingdom.*;
 
 public class ZooTest {
   Zoo edinburghZoo;
+  Zoo londonZoo;
   MonkeyEnclosure edinburghMonkeyEnclosure;
   SnakeEnclosure edinburghSnakeEnclosure;
+  MonkeyEnclosure londonMonkeyEnclosure;
   ZooKeeper edinburghZooKeeper;
+  ZooKeeper londonZooKeeper;
+
 
   @Before
   public void before() {
     edinburghZoo = new Zoo("Edinburgh Zoo");
+    londonZoo = new Zoo("London Zoo");
     edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
     edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 20);
+    londonMonkeyEnclosure = new MonkeyEnclosure("London Monkey Enclosure", 17);
     edinburghZooKeeper = new ZooKeeper("David");
+    londonZooKeeper = new ZooKeeper("Steve");
   }
 
   @Test
@@ -51,6 +58,5 @@ public class ZooTest {
     edinburghZoo.addToZoo(edinburghZooKeeper);
     assertEquals(1, edinburghZoo.zooKeeperCount());
   }
-
-
+  
 }
