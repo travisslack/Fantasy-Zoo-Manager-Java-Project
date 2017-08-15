@@ -60,10 +60,18 @@ public class ZooKeeperTest {
   }
 
   @Test
-  public void addFoodToSnake() {
+  public void addFoodNutToSnake() {
     zooKeeper.feedAnimal(nut, snake);
     assertEquals(1, snake.foodCount());
   }
+
+  @Test
+  public void addFoodMonkeyToSnake() {
+    zooKeeper.feedAnimal(monkey, snake);
+    assertEquals(1, snake.foodCount());
+  }
+
+
 
 
 

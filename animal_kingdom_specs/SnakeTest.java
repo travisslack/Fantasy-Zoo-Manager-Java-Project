@@ -7,12 +7,14 @@ public class SnakeTest {
   Snake snake;
   Edible nut;
   Edible banana;
+  Edible monkey;
 
   @Before
   public void before() {
     snake = new Snake("Kaa", "Green", 6);
     nut = new Nut();
     banana = new Banana();
+    monkey = new Monkey("Julius", "Brown", 4);
   }
 
   @Test
@@ -39,7 +41,8 @@ public class SnakeTest {
   public void canEat() {
     snake.eat(nut);
     snake.eat(banana);
-    assertEquals(2, snake.foodCount());
+    snake.eat(monkey);
+    assertEquals(3, snake.foodCount());
   }
 
 

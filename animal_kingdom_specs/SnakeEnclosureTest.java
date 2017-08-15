@@ -34,9 +34,4 @@ public class SnakeEnclosureTest {
     snakeEnclosure.removeFromEnclosure(snake);
     assertEquals(0, snakeEnclosure.animalCount());
   }
-
-
-
-
-
 }

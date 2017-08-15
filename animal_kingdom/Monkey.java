@@ -2,7 +2,7 @@ package animal_kingdom;
 import java.util.ArrayList;
 import behaviours.*;
 
-public class Monkey extends Animal {
+public class Monkey extends Animal implements Edible {
   private ArrayList<Edible> stomach;
 
 
