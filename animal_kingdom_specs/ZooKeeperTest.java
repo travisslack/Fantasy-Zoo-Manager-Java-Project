@@ -67,9 +67,17 @@ public class ZooKeeperTest {
 
   @Test
   public void canFeedMonkeyToSnake() {
+    zooKeeper.addToEnclosure(monkey, snakeEnclosure);
     zooKeeper.feedAnimal(monkey, snake);
     assertEquals(1, snake.foodCount());
   }
+
+  // @Test
+  // public void cantFeedMonkeyToSnake() {
+  //   zooKeeper.addToEnclosure(monkey, snakeEnclosure);
+  //   zooKeeper.
+  //   assertEquals(0, snake.foodCount());
+  // }
 
 
 

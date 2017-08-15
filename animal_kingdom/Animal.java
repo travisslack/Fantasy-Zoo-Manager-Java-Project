@@ -24,8 +24,9 @@ public abstract class Animal {
     return this.age;
   }
 
-
   public abstract void eat(Edible food);
+
+  
 
   
 

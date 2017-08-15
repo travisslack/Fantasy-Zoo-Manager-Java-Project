@@ -5,11 +5,13 @@ import animal_kingdom.*;
 public class SnakeEnclosureTest {
   SnakeEnclosure snakeEnclosure;
   Snake snake;
+  Monkey monkey;
 
   @Before
   public void before() {
     snakeEnclosure = new SnakeEnclosure("Snake Enclosure", 10);
     snake = new Snake("Kaa", "Green", 6);
+    monkey = new Monkey("James", "Red", 7);
   }
 
   @Test 
@@ -25,6 +27,12 @@ public class SnakeEnclosureTest {
   @Test
   public void canAddSnakeToSnakeEnclosure() {
     snakeEnclosure.addToEnclosure(snake);
+    assertEquals(1, snakeEnclosure.animalCount());
+  }
+
+  @Test
+  public void canAddMonkeyToSnakeEnclosure() {
+    snakeEnclosure.addToEnclosure(monkey);
     assertEquals(1, snakeEnclosure.animalCount());
   }
 
