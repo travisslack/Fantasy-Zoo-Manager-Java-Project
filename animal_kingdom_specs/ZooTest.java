@@ -128,6 +128,13 @@ public class ZooTest {
     assertEquals(1, edinburghZoo.animalCount());
   }
 
+  @Test
+  public void canRemoveAnimalFromZoo() {
+    edinburghZoo.addToZoo(monkey1);
+    edinburghZoo.removeFromZoo(monkey1);
+    assertEquals(0, edinburghZoo.animalCount());
+  }
+
 
   
 

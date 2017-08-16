@@ -62,6 +62,10 @@ public class Zoo {
     return this.animals.size();
   }
 
+  public void removeFromZoo(Animal a) {
+    this.animals.remove(a);
+  }
+
   public int visitorCount() {
     return this.visitors.size();
   }
