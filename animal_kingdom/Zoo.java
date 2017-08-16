@@ -5,14 +5,16 @@ public class Zoo {
   private String name;
   private int capacity;
   private double entryPrice;
+  private double totalIncome;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
 
-  public Zoo(String name, int capacity, double entryPrice) {
+  public Zoo(String name, int capacity, double entryPrice, double totalIncome) {
     this.name = name;
     this.capacity = capacity;
     this.entryPrice = entryPrice;
+    this.totalIncome = totalIncome;
     this.enclosure = new ArrayList<Enclosure>();
     this.zooKeepers = new ArrayList<ZooKeeper>();
     this.visitors = new ArrayList<Visitor>();
@@ -28,6 +30,10 @@ public class Zoo {
 
   public double entryPriceAmount() {
     return this.entryPrice;
+  }
+
+  public double zooTotalIncome() {
+    return this.totalIncome;
   }
 
   public void addToZoo(Enclosure e) {
