@@ -68,14 +68,10 @@ public class Zoo {
   }
 
   public boolean admitVisitor(Visitor visitor){
-    if (this.canAdmitVisitor() == true ){
-      if (visitor.hasFunds (this.entryPrice)){
+    if (this.canAdmitVisitor() && (visitor.hasFunds (this.entryPrice)) == true ){
         addToZoo(visitor);
         return true;
       } else {
-        return false;
-      }
-    } else {
       return false;
     } 
   }
