@@ -44,6 +44,7 @@ public class Zoo {
     return this.zooBudget;
   }
 
+// overloading 1
   public void addToZoo(Enclosure e) {
     this.enclosure.add(e);
   }
@@ -55,11 +56,11 @@ public class Zoo {
   public int zooKeeperCount() {
     return this.zooKeepers.size();
   }
-
+// overloading 2
   public void addToZoo(ZooKeeper zk) {
     this.zooKeepers.add(zk);
   }
-
+// overloading 3
   public void addToZoo(Animal a) {
     this.animals.add(a);
   }
@@ -79,7 +80,7 @@ public class Zoo {
   public int getCapacity() {
     return this.capacity;
   }
-
+// overloading 4
   public void addToZoo(Visitor v) {
     v.makePayment(this.entryPrice);
     this.visitors.add(v);
@@ -105,20 +106,26 @@ public class Zoo {
 
   public void addMoneyToIncome(double amount) {
    totalIncome += amount;
-   System.out.println(totalIncome);
   }
 
-  // public boolean transferAnimalToOtherZoo(Animal animal) {
-  //   if 
-  // }
 
-  // public boolean animalIsBaby(Animal animal) {
-  //   if (animal.getAge < 3) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
+  public boolean canTransferAnimal(Animal animal) {
+    if (this.zooBudget > animal.transferPrice) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public void transferAnimalToOtherZoo(Animal animal, Zoo zooToTransferTo) {
+    if (zooToTransferTo.zooBudget > animal.transferPrice) {
+      zooToTransferTo.addToZoo(animal);
+      this.removeFromZoo(animal);
+      this.addMoneyToIncome(animal.transferPrice);
+    }
+  }
+
+
 
 
 

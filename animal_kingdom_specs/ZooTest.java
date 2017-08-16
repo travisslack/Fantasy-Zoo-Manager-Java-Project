@@ -89,7 +89,6 @@ public class ZooTest {
 
   @Test
   public void canAdmitVisitorTest() {
-    visitor1 = new Visitor("J", 70.00);
     boolean result = edinburghZoo.canAdmitVisitor();
     assertEquals(true, result);
   }
@@ -138,6 +137,15 @@ public class ZooTest {
     edinburghZoo.addToZoo(monkey1);
     edinburghZoo.removeFromZoo(monkey1);
     assertEquals(0, edinburghZoo.animalCount());
+  }
+
+  @Test
+  public void canTransferAnimalTest() {
+    edinburghZoo.addToZoo(monkey1);
+    edinburghZoo.transferAnimalToOtherZoo(monkey1, londonZoo);
+    assertEquals(1, londonZoo.animalCount());
+    assertEquals(0, edinburghZoo.animalCount());
+    
   }
 
 
