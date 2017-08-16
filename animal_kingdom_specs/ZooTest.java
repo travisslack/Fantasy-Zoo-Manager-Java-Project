@@ -112,10 +112,12 @@ public class ZooTest {
     assertEquals(0, edinburghZoo.visitorCount());
   }
 
-
-
-
-
-
+  @Test
+  public void incomeIncreasesWhenVisitorEnters() {
+    edinburghZoo = new Zoo("Edinburgh Zoo", 1000, 15.00, 0.00);
+    visitor1 = new Visitor("J", 70.00);
+    edinburghZoo.admitVisitor(visitor1);
+    assertEquals(15.00, edinburghZoo.zooTotalIncome(), 0.01);
+  }
 
 }
