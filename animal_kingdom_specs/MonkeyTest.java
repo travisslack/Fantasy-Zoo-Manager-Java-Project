@@ -10,7 +10,7 @@ public class MonkeyTest {
 
   @Before
   public void before() {
-    monkey = new Monkey("Julius", "Brown", 4);
+    monkey = new Monkey("Julius", "Brown", 4, 200.00);
     nut = new Nut();
     banana = new Banana();
   }
@@ -29,6 +29,8 @@ public class MonkeyTest {
   public void hasAge() {
     assertEquals(4, monkey.getAge());
   }
+
+  
 
   @Test
   public void stomachStartsEmpty() {

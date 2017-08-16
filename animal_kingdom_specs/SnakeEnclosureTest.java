@@ -10,8 +10,8 @@ public class SnakeEnclosureTest {
   @Before
   public void before() {
     edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 10);
-    snake = new Snake("Kaa", "Green", 6);
-    monkey = new Monkey("James", "Red", 7);
+    snake = new Snake("Kaa", "Green", 6, 100.00);
+    monkey = new Monkey("Julius", "Brown", 4, 200.00);
   }
 
   @Test 

@@ -11,10 +11,10 @@ public class SnakeTest {
 
   @Before
   public void before() {
-    snake = new Snake("Kaa", "Green", 6);
+    snake = new Snake("Kaa", "Green", 6, 100.00);
     nut = new Nut();
     banana = new Banana();
-    monkey = new Monkey("Julius", "Brown", 4);
+    monkey = new Monkey("Julius", "Brown", 4, 200.00);
   }
 
   @Test

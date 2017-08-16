@@ -15,8 +15,8 @@ public class ZooKeeperTest {
   @Before
   public void before() {
     edinburghZooKeeper = new ZooKeeper("David");
-    monkey = new Monkey("Julius", "Brown", 4);
-    snake = new Snake("Kaa", "Green", 6);
+    monkey = new Monkey("Julius", "Brown", 4, 200.00);
+    snake = new Snake("Kaa", "Green", 6, 100.00);
     edinburghMonkeyEnclosure = new MonkeyEnclosure("Edinburgh Monkey Enclosure", 15);
     edinburghSnakeEnclosure = new SnakeEnclosure("Edinburgh Snake Enclosure", 10);
     banana = new Banana();

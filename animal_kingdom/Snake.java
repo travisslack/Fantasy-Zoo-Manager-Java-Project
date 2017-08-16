@@ -5,8 +5,8 @@ import behaviours.*;
 public class Snake extends Animal {
   private ArrayList<Edible> stomach;
 
-  public Snake(String name, String colour, int age) {
-    super(name, colour, age);
+  public Snake(String name, String colour, int age, double transferPrice) {
+    super(name, colour, age, transferPrice);
     this.stomach = new ArrayList<Edible>();
   }
 

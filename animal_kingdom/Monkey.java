@@ -6,8 +6,8 @@ public class Monkey extends Animal implements Edible {
   private ArrayList<Edible> stomach;
 
 
-  public Monkey(String name, String colour, int age) {
-    super(name, colour, age);
+  public Monkey(String name, String colour, int age, double transferPrice) {
+    super(name, colour, age, transferPrice);
     this.stomach = new ArrayList<Edible>();
   }
 

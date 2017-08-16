@@ -9,7 +9,7 @@ public class MonkeyEnclosureTest {
   @Before
   public void before() {
     monkeyEnclosure = new MonkeyEnclosure("Monkey Enclosure", 15);
-    monkey = new Monkey("Julius", "Brown", 4);
+    monkey = new Monkey("Julius", "Brown", 4, 200.00);
   }
 
   @Test 
