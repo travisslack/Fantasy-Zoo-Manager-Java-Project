@@ -156,10 +156,13 @@ public class ZooTest {
     assertEquals(300.00, edinburghZoo.totalPotentialProfit(), 0.01);
   }
 
-  // @Test void canHouseAnimal(){
-  //   edinburghZoo.houseAnimal(monkey1);
-
-  // }
+  @Test 
+  public void canHouseAnimal(){
+    edinburghZoo.addToZoo(edinburghMonkeyEnclosure);
+    edinburghZoo.addToZoo(edinburghZooKeeper);
+    edinburghZoo.houseAnimal(monkey1);
+    assertEquals(1, edinburghMonkeyEnclosure.animalCount());
+  }
 
 
   

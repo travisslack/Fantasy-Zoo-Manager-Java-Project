@@ -26,6 +26,23 @@ public class ZooKeeper {
     animal.eat(food);
   }
 
+  public Enclosure findEnclosureWithSpace(ArrayList<Enclosure> enclosures) {
+    for (int index = 0; index < enclosures.size(); index++){
+      Enclosure enclosure = enclosures.get(index);
+      if (enclosure.animalCount() < enclosure.size()){
+        return enclosure;
+      }
+    }
+    return null;
+  }
+
+  public void houseAnimal(Animal animal, ArrayList<Enclosure> enclosures){
+    Enclosure foundEnclosure = this.findEnclosureWithSpace(enclosures);
+    if (foundEnclosure != null) {
+      foundEnclosure.addToEnclosure(animal);
+    }
+  }
+
   
 }
 
