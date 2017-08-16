@@ -14,6 +14,7 @@ public class ZooTest {
   Visitor visitor2;
   Visitor visitor3;
   Monkey monkey1;
+  Snake snake1;
 
 
   @Before
@@ -29,6 +30,7 @@ public class ZooTest {
     visitor2 = new Visitor("D", 60.00);
     visitor3 = new Visitor("Z", 10.00);
     monkey1 = new Monkey("Julius", "Brown", 4, 200.00);
+    snake1 = new Snake("Kaa", "Gold", 6, 100.00);
   }
 
   @Test
@@ -149,8 +151,15 @@ public class ZooTest {
 
   @Test
   public void canGetTotalPotentialProfit() {
-    
+    edinburghZoo.addToZoo(monkey1);
+    edinburghZoo.addToZoo(snake1);
+    assertEquals(300.00, edinburghZoo.totalPotentialProfit(), 0.01);
   }
+
+  // @Test void canHouseAnimal(){
+  //   edinburghZoo.houseAnimal(monkey1);
+
+  // }
 
 
   
