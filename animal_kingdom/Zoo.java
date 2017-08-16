@@ -6,16 +6,18 @@ public class Zoo {
   private int capacity;
   private double entryPrice;
   private double totalIncome;
+  private double zooBudget;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
   private ArrayList<Animal> animals;
 
-  public Zoo(String name, int capacity, double entryPrice, double totalIncome) {
+  public Zoo(String name, int capacity, double entryPrice, double totalIncome, double zooBudget) {
     this.name = name;
     this.capacity = capacity;
     this.entryPrice = entryPrice;
     this.totalIncome = totalIncome;
+    this.zooBudget = zooBudget;
     this.enclosure = new ArrayList<Enclosure>();
     this.zooKeepers = new ArrayList<ZooKeeper>();
     this.visitors = new ArrayList<Visitor>();
@@ -36,6 +38,10 @@ public class Zoo {
 
   public double zooTotalIncome() {
     return this.totalIncome;
+  }
+
+  public double zooTotalBudget() {
+    return this.zooBudget;
   }
 
   public void addToZoo(Enclosure e) {
@@ -101,6 +107,10 @@ public class Zoo {
    totalIncome += amount;
    System.out.println(totalIncome);
   }
+
+  // public boolean transferAnimalToOtherZoo(Animal animal) {
+  //   if 
+  // }
 
   // public boolean animalIsBaby(Animal animal) {
   //   if (animal.getAge < 3) {
