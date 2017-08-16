@@ -75,18 +75,29 @@ public class ZooTest {
 
   @Test
   public void canAdmitVisitorTest() {
+    visitor1 = new Visitor("J", 70.00);
     boolean result = edinburghZoo.canAdmitVisitor();
     assertEquals(true, result);
   }
 
   @Test
   public void cantAdmitVisitorTest() {
-    edinburghZoo.capacity = 2;
+    edinburghZoo = new Zoo("Edinburgh Zoo", 2, 15.00);
     edinburghZoo.addToZoo(visitor1);
     edinburghZoo.addToZoo(visitor2);
     boolean result = edinburghZoo.canAdmitVisitor();
     assertEquals(false, result);
   }
+
+  @Test
+  public void canAdmitVisitorWithReqFunds(){
+    visitor1 = new Visitor("J", 70.00);
+    edinburghZoo.admitVisitor(visitor1);
+    assertEquals(55.00, visitor1.getBudget(), 0.01);
+    assertEquals(1, edinburghZoo.visitorCount());
+  };
+
+
 
 
 

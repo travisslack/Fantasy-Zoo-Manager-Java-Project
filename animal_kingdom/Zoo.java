@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Zoo {
   private String name;
-  public int capacity;
-  public double entryPrice;
+  private int capacity;
+  private double entryPrice;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
@@ -75,6 +75,8 @@ public class Zoo {
       return false;
     } 
   }
+
+
 
 
 }

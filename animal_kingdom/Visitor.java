@@ -18,10 +18,9 @@ public class Visitor {
   }
 
   public boolean hasFunds(double entryPrice) {
-    if (this.budget <= entryPrice){
+    if (this.budget >= entryPrice){
       return true;
-    } 
-    else{
+    } else{
       return false;
     }
   }
