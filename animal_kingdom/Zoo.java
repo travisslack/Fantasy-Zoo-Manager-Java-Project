@@ -4,13 +4,15 @@ import java.util.ArrayList;
 public class Zoo {
   private String name;
   public int capacity;
+  public double entryPrice;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
 
-  public Zoo(String name, int capacity) {
+  public Zoo(String name, int capacity, double entryPrice) {
     this.name = name;
     this.capacity = capacity;
+    this.entryPrice = entryPrice;
     this.enclosure = new ArrayList<Enclosure>();
     this.zooKeepers = new ArrayList<ZooKeeper>();
     this.visitors = new ArrayList<Visitor>();
@@ -22,6 +24,10 @@ public class Zoo {
 
   public int enclosureCount() {
     return this.enclosure.size();
+  }
+
+  public double entryPriceAmount() {
+    return this.entryPrice;
   }
 
   public void addToZoo(Enclosure e) {
