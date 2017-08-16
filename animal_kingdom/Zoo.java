@@ -55,10 +55,11 @@ public class Zoo {
   }
 
   public void addToZoo(Visitor v) {
+    v.makePayment(this.entryPrice);
     this.visitors.add(v);
   }
 
-  public Boolean canAdmitVisitor() {
+  public boolean canAdmitVisitor() {
     if (this.visitors.size() < capacity) {
       return true;
     } else {
@@ -66,11 +67,19 @@ public class Zoo {
     }
   }
 
-  public void admitVisitor(Visitor visitor){
-    if (this.canAdmitVisitor() == true){
-      addToZoo(visitor);
-    }
+  public boolean admitVisitor(Visitor visitor){
+    if (this.canAdmitVisitor() == true ){
+      if (visitor.hasFunds (this.entryPrice)){
+        addToZoo(visitor);
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    } 
   }
+
 
 }
 

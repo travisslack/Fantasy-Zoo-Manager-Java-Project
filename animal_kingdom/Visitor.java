@@ -16,4 +16,17 @@ public class Visitor {
   public double getBudget() {
     return this.budget;
   }
+
+  public boolean hasFunds(double entryPrice) {
+    if (this.budget <= entryPrice){
+      return true;
+    } 
+    else{
+      return false;
+    }
+  }
+
+  public void makePayment(double amount) {
+    this.budget -= amount;
+  }
 }
