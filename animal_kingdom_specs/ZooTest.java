@@ -95,7 +95,7 @@ public class ZooTest {
     edinburghZoo.admitVisitor(visitor1);
     assertEquals(55.00, visitor1.getBudget(), 0.01);
     assertEquals(1, edinburghZoo.visitorCount());
-  };
+  }
 
 
 
