@@ -11,6 +11,7 @@ public class ZooTest {
   ZooKeeper edinburghZooKeeper;
   ZooKeeper londonZooKeeper;
   Visitor visitor1;
+  Visitor visitor2;
 
 
   @Before
@@ -23,6 +24,7 @@ public class ZooTest {
     edinburghZooKeeper = new ZooKeeper("David");
     londonZooKeeper = new ZooKeeper("Steve");
     visitor1 = new Visitor("J", 70.00);
+    visitor2 = new Visitor("D", 60.00);
   }
 
   @Test
@@ -66,6 +68,22 @@ public class ZooTest {
   assertEquals(1, edinburghZoo.visitorCount());
   }
 
+  @Test
+  public void canAdmitVisitorTest() {
+    boolean result = edinburghZoo.canAdmitVisitor();
+    assertEquals(true, result);
+  }
+
+  @Test
+  public void cantAdmitVisitorTest() {
+    edinburghZoo.capacity = 2;
+    edinburghZoo.addToZoo(visitor1);
+    edinburghZoo.addToZoo(visitor2);
+    boolean result = edinburghZoo.canAdmitVisitor();
+    assertEquals(false, result);
+  }
+
+  
 
 
 

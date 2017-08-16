@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Zoo {
   private String name;
-  private int capacity;
+  public int capacity;
   private ArrayList<Enclosure> enclosure;
   private ArrayList<ZooKeeper> zooKeepers;
   private ArrayList<Visitor> visitors;
@@ -52,25 +52,21 @@ public class Zoo {
     this.visitors.add(v);
   }
 
-  // public Boolean canAdmitVisitor(Visitor visitor) {
-  //   if (this.visitors < capacity) {
-  //     return true;
-  //   } else if (visitors >= capacity) {
-  //     return false;
-  //   }
-  // }
-
-  // public void admitVisitor(Visitor visitor){
-  //   if this.canAdmitVisitor(Visitor){
-  //     return this.capacity.add();
-  //   }
-  // }
-
-    // if the length of the arraylist of visitors
-    // is less than the capacity
-    // allow admittance
-    // else return false
+  public Boolean canAdmitVisitor() {
+    if (this.visitors.size() < capacity) {
+      return true;
+    } else {
+      return false;
+    }
   }
+
+  public void admitVisitor(Visitor visitor){
+    if (this.canAdmitVisitor() == true){
+      addToZoo(visitor);
+    }
+  }
+
+}
 
 
 
