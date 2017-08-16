@@ -30,7 +30,7 @@ public class MonkeyTest {
     assertEquals(4, monkey.getAge());
   }
 
-  
+
 
   @Test
   public void stomachStartsEmpty() {

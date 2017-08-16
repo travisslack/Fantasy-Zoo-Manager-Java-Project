@@ -13,6 +13,7 @@ public class ZooTest {
   Visitor visitor1;
   Visitor visitor2;
   Visitor visitor3;
+  Monkey monkey1;
 
 
   @Before
@@ -27,6 +28,7 @@ public class ZooTest {
     visitor1 = new Visitor("J", 70.00);
     visitor2 = new Visitor("D", 60.00);
     visitor3 = new Visitor("Z", 10.00);
+    monkey1 = new Monkey("Julius", "Brown", 4, 200.00);
   }
 
   @Test
@@ -120,6 +122,13 @@ public class ZooTest {
     assertEquals(15.00, edinburghZoo.zooTotalIncome(), 0.01);
   }
 
+  @Test
+  public void canAddAnimalToZoo() {
+    edinburghZoo.addToZoo(monkey1);
+    assertEquals(1, edinburghZoo.animalCount());
+  }
 
+
+  
 
 }

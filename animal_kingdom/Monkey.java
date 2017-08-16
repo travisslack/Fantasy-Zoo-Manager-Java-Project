@@ -19,6 +19,8 @@ public class Monkey extends Animal implements Edible {
     this.stomach.add(food);
   }
 
+  
+
 
 
 
