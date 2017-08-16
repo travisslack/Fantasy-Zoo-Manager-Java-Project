@@ -145,6 +145,10 @@ public class ZooTest {
     edinburghZoo.transferAnimalToOtherZoo(monkey1, londonZoo);
     assertEquals(1, londonZoo.animalCount());
     assertEquals(0, edinburghZoo.animalCount());
+  }
+
+  @Test
+  public void canGetTotalPotentialProfit() {
     
   }
 

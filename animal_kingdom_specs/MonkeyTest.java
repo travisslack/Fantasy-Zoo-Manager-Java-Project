@@ -30,7 +30,10 @@ public class MonkeyTest {
     assertEquals(4, monkey.getAge());
   }
 
-
+  @Test
+  public void hasTransferPrice() {
+    assertEquals(200.00, monkey.getTransferPrice(), 0.01);
+  }
 
   @Test
   public void stomachStartsEmpty() {

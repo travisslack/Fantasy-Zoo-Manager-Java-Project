@@ -125,6 +125,16 @@ public class Zoo {
     }
   }
 
+  // public int totalPotentialProfit() {
+  //   int total = 0;
+  //   for( Animal animal : enclosures ) {
+  //     total += animal.transferPrice();
+  //   }
+  //   return total;
+  // }
+
+
+
 
 
 

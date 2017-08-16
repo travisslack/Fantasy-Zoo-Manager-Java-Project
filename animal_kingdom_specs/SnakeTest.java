@@ -33,6 +33,11 @@ public class SnakeTest {
   }
 
   @Test
+  public void hasTransferPrice() {
+    assertEquals(100.00, snake.getTransferPrice(), 0.01);
+  }
+
+  @Test
   public void stomachStartsEmpty() {
     assertEquals(0, snake.foodCount());
   }

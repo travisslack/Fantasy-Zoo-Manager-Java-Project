@@ -26,6 +26,10 @@ public abstract class Animal {
     return this.age;
   }
 
+  public double getTransferPrice() {
+    return this.transferPrice;
+  }
+
   public abstract void eat(Edible food);
 
 }
