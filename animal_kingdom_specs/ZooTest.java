@@ -12,6 +12,7 @@ public class ZooTest {
   ZooKeeper londonZooKeeper;
   Visitor visitor1;
   Visitor visitor2;
+  Visitor visitor3;
 
 
   @Before
@@ -25,6 +26,7 @@ public class ZooTest {
     londonZooKeeper = new ZooKeeper("Steve");
     visitor1 = new Visitor("J", 70.00);
     visitor2 = new Visitor("D", 60.00);
+    visitor3 = new Visitor("Z", 10.00);
   }
 
   @Test
@@ -95,6 +97,14 @@ public class ZooTest {
     edinburghZoo.admitVisitor(visitor1);
     assertEquals(55.00, visitor1.getBudget(), 0.01);
     assertEquals(1, edinburghZoo.visitorCount());
+  }
+
+  @Test
+  public void cantAdmitVisitorWithoutReqFunds() {
+    visitor3 = new Visitor("Z", 10.00);
+    edinburghZoo.admitVisitor(visitor3);
+    assertEquals(10.00, visitor3.getBudget(), 0.01);
+    assertEquals(0, edinburghZoo.visitorCount());
   }
 
 
