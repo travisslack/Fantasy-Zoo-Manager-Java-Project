@@ -116,7 +116,9 @@ public class ZooTest {
   public void incomeIncreasesWhenVisitorEnters() {
     edinburghZoo = new Zoo("Edinburgh Zoo", 1000, 15.00, 0.00);
     visitor1 = new Visitor("J", 70.00);
+    // visitor2 = new Visitor("D", 60.00);
     edinburghZoo.admitVisitor(visitor1);
+    // edinburghZoo.admitVisitor(visitor2);
     assertEquals(15.00, edinburghZoo.zooTotalIncome(), 0.01);
   }
 

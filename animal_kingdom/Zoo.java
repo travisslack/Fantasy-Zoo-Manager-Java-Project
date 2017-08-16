@@ -85,6 +85,7 @@ public class Zoo {
 
   public void addMoneyToIncome(double amount) {
    totalIncome += amount;
+   System.out.println(totalIncome);
 
   }
 
