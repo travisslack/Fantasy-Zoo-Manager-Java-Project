@@ -97,7 +97,7 @@ public class ZooTest {
   }
 
   @Test
-  public void canAdmitVisitorWithReqFunds(){
+  public void canAdmitVisitorWithReqFundsTest(){
     visitor1 = new Visitor("J", 70.00);
     edinburghZoo.admitVisitor(visitor1);
     assertEquals(55.00, visitor1.getBudget(), 0.01);
@@ -105,7 +105,7 @@ public class ZooTest {
   }
 
   @Test
-  public void cantAdmitVisitorWithoutReqFunds() {
+  public void cantAdmitVisitorWithoutReqFundsTest() {
     visitor3 = new Visitor("Z", 10.00);
     edinburghZoo.admitVisitor(visitor3);
     assertEquals(10.00, visitor3.getBudget(), 0.01);
@@ -113,13 +113,13 @@ public class ZooTest {
   }
 
   @Test
-  public void incomeIncreasesWhenVisitorEnters() {
+  public void incomeIncreasesWhenVisitorEntersTest() {
     edinburghZoo = new Zoo("Edinburgh Zoo", 1000, 15.00, 0.00);
     visitor1 = new Visitor("J", 70.00);
-    // visitor2 = new Visitor("D", 60.00);
     edinburghZoo.admitVisitor(visitor1);
-    // edinburghZoo.admitVisitor(visitor2);
     assertEquals(15.00, edinburghZoo.zooTotalIncome(), 0.01);
   }
+
+
 
 }
